@@ -1,7 +1,7 @@
 {
   "name": "sample-fullstack-app",
-  "private": true,
   "version": "1.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
@@ -10,17 +10,16 @@
     "build": "cd client && npm run build",
     "start": "node server/index.js",
     "test": "npm run test:server && npm run test:client",
-    "test:server": "node --test server/tests/**/*.test.js",
+    "test:server": "node --test server/tests",
     "test:client": "cd client && npm run test -- --run"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^5.1.6",
+    "concurrently": "^9.1.2"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2",
-    "eslint": "^9.15.0"
+    "dotenv": "^16.4.5"
   }
 }
